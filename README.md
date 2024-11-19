@@ -1,5 +1,12 @@
 # Synchronize Access to Mutable State
 
+**SynchronousAccess** is a Swift-based project that demonstrates various methods to safely synchronize access to shared mutable state in a multithreaded environment. It showcases different synchronization mechanisms, their usage, advantages, and disadvantages, providing practical implementations for thread-safe operations.
+
+### **Goals:**
+- Provide examples of synchronization mechanisms available in Swift and Apple's ecosystem.
+- Demonstrate thread-safe access to shared state using practical implementations.
+- Highlight the pros and cons of each method for real-world scenarios.
+
 ## 1. Serial Dispatch Queue as Synchronization
 
 **Advantages:**
