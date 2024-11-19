@@ -42,3 +42,23 @@ final class Counter: Sendable {
 }
 ```
 
+3. Using a Concurrent Queue with Barrier
+```swift
+
+final class Counter: Sendable {
+    private var value: Int = 0
+    private let queue = DispatchQueue(label: "com.example.counterQueue", attributes: .concurrent)
+
+    func increase() {
+        queue.async(flags: .barrier) {
+            self.value += 1
+        }
+    }
+
+    func getValue() -> Int {
+        return queue.sync {
+            value
+        }
+    }
+}
+```
