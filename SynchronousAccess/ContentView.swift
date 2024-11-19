@@ -146,20 +146,17 @@ struct ContentView: View {
                 }
                 .navigationTitle(title)
                 
-                // Toast View
-                if showToast {
-                    VStack {
-                        Spacer()
-                        Text(toastMessage)
-                            .padding()
-                            .background(Color.indigo.gradient)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                            .transition(.opacity.combined(with: .move(edge: .bottom)))
-                            .animation(.easeInOut, value: showToast)
-                    }
-                    .padding(.bottom, 40)
+                VStack {
+                    Spacer()
+                    Text(toastMessage)
+                        .padding()
+                        .background(Color.indigo.gradient)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
                 }
+                .padding(.bottom, 40)
+                .allowsHitTesting(false)
+                .opacity(showToast ? 1 : 0 )                
             }
         }
     }
@@ -167,9 +164,11 @@ struct ContentView: View {
     /// Helper function to show the toast message
     private func showToastMessage(_ message: String) {
         toastMessage = message
-        showToast = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        withAnimation{
+            showToast = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 showToast = false
+            }
         }
     }
 }
