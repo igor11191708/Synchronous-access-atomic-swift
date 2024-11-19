@@ -2,7 +2,7 @@
 //  OperationQueueCounter.swift
 //  SynchronousAccess
 //
-//  Created by Igor  on 19.11.24.
+//  Created by Igor Shelopaev on 19.11.24.
 //
 
 import Foundation

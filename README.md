@@ -1,6 +1,8 @@
 # Synchronize Access to Mutable State
 ### Examples of synchronization mechanisms available in Swift and Apple's ecosystem.
 
+Swift-based project that demonstrates various methods to safely synchronize access to shared mutable state in a multithreaded environment. It showcases different synchronization mechanisms, their usage, advantages, and disadvantages, providing practical implementations for thread-safe operations.
+
 ## 1. Serial Dispatch Queue as Synchronization
 
 **Advantages:**

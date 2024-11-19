@@ -2,7 +2,7 @@
 //  ICounter.swift
 //  SynchronousAccess
 //
-//  Created by Igor  on 19.11.24.
+//  Created by Igor Shelopaev on 19.11.24.
 //
 
 protocol ICounter{
