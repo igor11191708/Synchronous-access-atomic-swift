@@ -20,3 +20,25 @@ final class Counter: Sendable {
     }
 }
 ```
+
+2. Using Locks (NSLock)
+```swift
+final class Counter: Sendable {
+    private var value: Int = 0
+    private let lock = NSLock()
+
+    func increase() {
+        lock.lock()
+        value += 1
+        lock.unlock()
+    }
+
+    func getValue() -> Int {
+        lock.lock()
+        let currentValue = value
+        lock.unlock()
+        return currentValue
+    }
+}
+```
+
