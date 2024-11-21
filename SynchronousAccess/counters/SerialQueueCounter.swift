@@ -9,7 +9,7 @@ import Foundation
 
 /// A counter implementation that uses a serial `DispatchQueue` to synchronize access to the shared `value`.
 /// The serial queue ensures that only one operation is executed at a time, making all modifications and reads of `value` thread-safe.
-final class SerialQueueCounter: ICounter, @unchecked Sendable {
+final class SerialQueueCounter: ISyncCounter, @unchecked Sendable {
     
     /// The counter value shared across threads.
     /// Access to this value is synchronized using a serial `DispatchQueue`.

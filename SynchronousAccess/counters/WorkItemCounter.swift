@@ -9,7 +9,7 @@ import Foundation
 
 /// A counter implementation that uses `DispatchWorkItem` and `DispatchGroup` to synchronize access to the shared `value`.
 /// The combination of a serial `DispatchQueue` and `DispatchGroup` ensures thread-safe updates and reads of `value`.
-final class WorkItemCounter: ICounter, @unchecked Sendable {
+final class WorkItemCounter: ISyncCounter, @unchecked Sendable {
 
     /// The counter value shared across threads.
     /// Access to this value is synchronized using `DispatchWorkItem` and `DispatchGroup`.

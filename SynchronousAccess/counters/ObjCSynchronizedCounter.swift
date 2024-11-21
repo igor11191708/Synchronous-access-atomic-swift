@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ObjCSynchronizedCounter: ICounter, @unchecked Sendable {
+final class ObjCSynchronizedCounter: ISyncCounter, @unchecked Sendable {
 
     /// The counter value that is shared across threads.
     /// Access to this value is synchronized using Objective-C's `objc_sync_enter` and `objc_sync_exit`.

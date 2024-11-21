@@ -5,13 +5,14 @@
 //  Created by Igor Shelopaev on 19.11.24.
 //
 
-protocol ICounter{
+
+protocol ISyncCounter {
     
-    var value : Int { get set }
+    var value: Int { get set }
     
     func increase()
     
-    var getValue : Int { get }
+    var getValue: Int { get }
     
     init()
 }

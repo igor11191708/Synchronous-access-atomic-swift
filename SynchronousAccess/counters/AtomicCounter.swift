@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class AtomicCounter: ICounter, @unchecked Sendable {
+final class AtomicCounter: ISyncCounter, @unchecked Sendable {
     
     /// The shared counter value, protected by the `Atomic` property wrapper for thread safety.
     @Atomic var value: Int = 0

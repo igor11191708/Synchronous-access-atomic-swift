@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class DispatchSemaphoresCounter: ICounter, @unchecked Sendable {
+final class DispatchSemaphoresCounter: ISyncCounter, @unchecked Sendable {
     
     /// The counter value shared across multiple threads.
     /// Access to this value is synchronized using a semaphore.

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RecursiveLockCounter: ICounter, @unchecked Sendable {
+final class RecursiveLockCounter: ISyncCounter, @unchecked Sendable {
 
     /// The counter value shared across threads.
     /// Access to this value is synchronized using an `NSRecursiveLock`.

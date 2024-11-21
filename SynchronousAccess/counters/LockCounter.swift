@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class LockCounter: ICounter, @unchecked Sendable {
+final class LockCounter: ISyncCounter, @unchecked Sendable {
 
     /// The counter value that is shared and modified across multiple threads.
     /// Access to this value is synchronized using a lock.

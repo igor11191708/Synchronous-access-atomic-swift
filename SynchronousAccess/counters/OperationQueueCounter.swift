@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class OperationQueueCounter: ICounter, @unchecked Sendable {
+final class OperationQueueCounter: ISyncCounter, @unchecked Sendable {
     
     /// The counter value shared across threads.
     /// Access to this value is synchronized through an `OperationQueue`.

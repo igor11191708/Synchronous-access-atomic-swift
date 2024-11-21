@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ConcurrentQueueBarrierCounter : ICounter, @unchecked Sendable {
+final class ConcurrentQueueBarrierCounter : ISyncCounter, @unchecked Sendable {
     
     /// The counter value shared between threads.
     /// Access to this value is synchronized using a concurrent dispatch queue.

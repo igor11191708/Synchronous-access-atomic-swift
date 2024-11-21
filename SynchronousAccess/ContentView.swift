@@ -29,15 +29,10 @@ struct ContentView: View {
                         }
                         Button("5. Actors as Synchronization") {
                             Task {
-                                let counter = ActorCounter()
-                                await withTaskGroup(of: Void.self) { group in
-                                    for _ in 1..<12 {
-                                        group.addTask { await counter.increase() }
-                                    }
-                                    await group.waitForAll()
-                                    await print(counter.getValue)
-                                    showToastMessage("Actor Counter finished: \(await counter.getValue)")
-                                }
+                                let value = await model.runCounter(type: ActorCounter.self, max: 12)
+   
+                                print(value)
+                                showToastMessage("Actors Counter finished: \(value)")
                             }
                         }
                     }

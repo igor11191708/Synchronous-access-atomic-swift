@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class OsUnfairLockCounter: ICounter, @unchecked Sendable {
+final class OsUnfairLockCounter: ISyncCounter, @unchecked Sendable {
     
     /// The counter value shared across threads.
     /// Access to this value is synchronized using `os_unfair_lock`.

@@ -3,6 +3,9 @@
 
 Swift-based project that demonstrates various methods to safely synchronize access to shared mutable state in a multithreaded environment. It showcases different synchronization mechanisms, their usage, advantages, and disadvantages, providing practical implementations for thread-safe operations.
 
+### Unifying Synchronous and Asynchronous Behaviors
+This example demonstrates a pattern for unifying access to counters implemented using two different concurrency models: traditional class-based counters, which allow synchronous access, and actor-based counters, which require asynchronous access. The implementation highlights how to handle this dual behavior effectively without duplicating logic, ensuring compatibility with Swift’s modern concurrency model while maintaining support for legacy approaches.
+
 ## 1. Serial Dispatch Queue as Synchronization
 
 **Advantages:**

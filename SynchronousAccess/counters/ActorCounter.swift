@@ -7,7 +7,7 @@
 
 import Foundation
 
-actor ActorCounter: Sendable {
+actor ActorCounter: Sendable, IAsyncCounter {
     
     /// The counter value stored in the actor.
     /// Access to this value is isolated to the actor, ensuring thread safety.
@@ -18,7 +18,7 @@ actor ActorCounter: Sendable {
     /// Since this method runs within the actor's concurrency domain,
     /// it is inherently thread-safe. Multiple callers will execute this
     /// function sequentially, ensuring no race conditions occur.
-    func increase() {
+    func increase() async {
         value += 1
     }
 

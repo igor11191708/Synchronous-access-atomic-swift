@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PThreadMutexCounter: ICounter, @unchecked Sendable {
+final class PThreadMutexCounter: ISyncCounter, @unchecked Sendable {
 
     /// The counter value shared across threads.
     /// Access to this value is synchronized using a POSIX `pthread_mutex_t`.

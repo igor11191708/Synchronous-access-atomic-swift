@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class OperationDependencyCounter: ICounter, @unchecked Sendable {
+final class OperationDependencyCounter: ISyncCounter, @unchecked Sendable {
     /// The shared counter value that will be incremented.
     var value: Int = 0
 
